@@ -1,0 +1,58 @@
+cabal-version: 1.18
+
+-- This file has been generated from package.yaml by hpack version 0.34.5.
+--
+-- see: https://github.com/sol/hpack
+
+name:           exception-context-th
+version:        0.0.1
+synopsis:       Add context to exception
+description:    Template Haskell macroses that add location info to exception
+category:       Error Handling
+homepage:       https://github.com/aleksey-makarov/exception-context-th
+bug-reports:    https://github.com/aleksey-makarov/exception-context-th/issues
+author:         Aleksey Makarov
+maintainer:     aleksey.makarov@gmail.com
+copyright:      Aleksey Makarov
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+tested-with:
+    GHC == 8.10.7
+extra-doc-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/aleksey-makarov/exception-context-th
+
+library
+  exposed-modules:
+      Control.Exception.ContextTH
+  other-modules:
+      Paths_exception_context_th
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wno-redundant-constraints
+  build-depends:
+      base >=4.6 && <5.0
+    , exceptions
+    , template-haskell ==2.16.*
+  default-language: Haskell2010
+
+test-suite exceptions
+  type: exitcode-stdio-1.0
+  main-is: Test.hs
+  other-modules:
+      Paths_exception_context_th
+  hs-source-dirs:
+      tests
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wno-redundant-constraints
+  build-depends:
+      base >=4.6 && <5.0
+    , exception-context-th
+    , exceptions
+    , tasty
+    , tasty-hunit
+  default-language: Haskell2010
