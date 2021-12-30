@@ -7,7 +7,9 @@
 -- Stability   : experimental
 -- Portability : portable
 --
--- Exception that keeps the stack of error locations.
+-- A set of macroses that add context (an arbitrary string and location)
+-- to exceptions thrown from any `MonadThrow` monad.
+-- Also special cases for `Maybe a` and `Either String a` are provided.
 
 {-# LANGUAGE RecordWildCards #-}
 {-# LANGUAGE TemplateHaskell #-}
