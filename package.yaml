@@ -20,7 +20,7 @@ github: aleksey-makarov/exception-context-th
 
 library:
   dependencies:
-    - template-haskell >= 2.16 && < 2.17
+    - template-haskell >= 2.16 && < 2.18
     - exceptions
   source-dirs: src
   exposed-modules:
